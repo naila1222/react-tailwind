@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -7,7 +9,7 @@ function LoginPage() {
         password: '',
     });
 
-    const handleChange = (e) => {
+    const handleChange  = (e) => {
         setFormData({ formData, [e.target.name]: e.target.value });
     };
 
@@ -33,7 +35,7 @@ function LoginPage() {
                             type="email"
                             name="email"
                             value={formData.email}
-                            onChange={handlechange}
+                            onChange={handleChange }
                             placeholder="Masukan email anda"
                             required
                         />
@@ -48,7 +50,7 @@ function LoginPage() {
                             type="password"
                             name="password"
                             value={formData.password}
-                            onChange={handleChange}
+                            onChange={handleChange }
                             placeholder="Masukan password anda"
                             required
                         />
@@ -71,3 +73,5 @@ function LoginPage() {
         </div >
     )
 } 
+
+export default LoginPage

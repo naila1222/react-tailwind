@@ -1,10 +1,12 @@
-import { Routes, Route}from "react-rounter-dom"
-import Tabeltailwind from '../pages/Tabeltailwind'
+import { Route, Routes } from "react-router-dom"
+import Resiger from "./pages/register"
+import LoginPage from "./pages/login"
 
 const App = () => {
   return (
      <Routes>
-        <Route path="/" element={<Tabeltailwind/>}/>
+        <Route path="/" element={<Resiger/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
      </Routes>
   )
 }
