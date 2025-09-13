@@ -1,14 +1,18 @@
-import { Route, Routes } from "react-router-dom"
-import Resiger from "./pages/register"
-import LoginPage from "./pages/login"
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Landingpage from './pages/Landingpage';
 
-const App = () => {
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
-     <Routes>
-        <Route path="/" element={<Resiger/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
-     </Routes>
-  )
+    <Routes>
+      <Route path="/" element={<Landingpage />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
