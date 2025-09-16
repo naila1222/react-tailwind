@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from "react-router-dom"
 function LandingPage() {
 return (
     <>
@@ -13,7 +13,10 @@ return (
     <div className="flex justify-center mt-10">
         <div className="bg-[blue] rounded-full p-4 md:p-6 shadow-xl w-full max-w-xs">
         <div className="text-center text-white font-extrabold text-xl md:text-3xl">
-            Pendaftaran SMK Binusa
+          <h1>Pendaftaran SMK Binusa</h1>
+          <Link to="/d">
+            <button classname="bg-amber-50">Masuk</button>
+            </Link>
         </div>
         </div>
 </div>
