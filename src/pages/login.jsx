@@ -5,9 +5,6 @@ function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    alamatRumah: '',
-    orangtua: '',
-    asalSekolah: '',
   });
 
   const handleChange = (e) => {
@@ -16,7 +13,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Data Login:', formData);
+    console.log('Data Login:', formData);   
     alert('Simulasi login berhasil');
   };
 
@@ -60,61 +57,11 @@ function Login() {
             />
           </div>
 
-          {/* Alamat Rumah */}
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="alamatRumah">
-              Alamat Rumah
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="alamatRumah"
-              type="text"
-              name="alamatRumah"
-              value={formData.alamatRumah}
-              onChange={handleChange}
-              placeholder="Masukkan alamat rumah anda"
-              required
-            />
-          </div>
-
-          {/* Nama Orang Tua */}
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="orangtua">
-              Nama Orang Tua
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="orangtua"
-              type="text"
-              name="orangtua"
-              value={formData.orangtua}
-              onChange={handleChange}
-              placeholder="Masukkan nama orang tua"
-              required
-            />
-          </div>
-
-          {/* Asal Sekolah */}
-          <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="asalSekolah">
-              Asal Sekolah
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="asalSekolah"
-              type="text"
-              name="asalSekolah"
-              value={formData.asalSekolah}
-              onChange={handleChange}
-              placeholder="Masukkan asal sekolah"
-              required
-            />
-          </div>
-
+          
           {/* Tombol & Link */}
           <div className="flex items-center justify-between">
             <button
-className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Masuk
@@ -127,6 +74,8 @@ className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded 
             </Link>
           </div>
         </form>
+      </div>
+      <div>
       </div>
     </div>
   );
