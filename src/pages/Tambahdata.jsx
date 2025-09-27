@@ -1,25 +1,46 @@
-import { useState } from "react";
+import {useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function TambahData() {
     const [formData, setFormData] = useState({
         makanan: '',
-        Paket: '',
-        Harga: '',
+        paket: '',
+        harga: '',
     });
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Tambah data:', formData);
-        alert('Penambahan data berhasil!');
-    };
+        setLoading(true);
+    try {
+        const response = await axios.post("http://localhost:5000/menu", formData);
+
+        console.log('respon server:', response.data);
+        alert ('pesanan berhasil!');
+
+        setFormData({
+            makanan:"",
+            paket:"",
+            harga:"",
+        });
+        navigate("/k");
+    }catch (error) {
+        console.error("Error saat menambahkan data:", error);
+        alert("Gagal menambahkan data.");
+    } finally {
+        setLoading(false);
+    }
+};
 
     const handleKembali = () => {
-        window.history.back();
-    };
+        navigate (-1);
+    }
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
@@ -28,7 +49,7 @@ function TambahData() {
                 className="bg-white p-6 rounded-md shadow-md w-96"
             >
                 <div className="">
-                    <h2 className="text-center font-bold mb-4 text-lg">Tambah Teks</h2>
+                    <h2 className="text-center font-bold mb-4 text-lg">Pesan Makanan</h2>
 
                     <label className="block mb-2 font-semibold" htmlFor="makanan">
                         Makanan
@@ -49,10 +70,10 @@ function TambahData() {
                     </label>
                     <input
                         id="paket"
-                        name="Paket"
+                        name="paket"
                         type="text"
                         placeholder="masukan teks"
-                        value={formData.Paket}
+                        value={formData.paket}
                         onChange={handleChange}
                         className="border border-gray-300 rounded px-3 py-2 mb-4 w-full"
                         required
@@ -61,10 +82,10 @@ function TambahData() {
                         Harga
                     </label>
                     <input
-                        id="Harga"
+                        id="harga"
                         type="text"
-                        name="Harga"
-                        value={formData.Harga}
+                        name="harga"
+                        value={formData.harga}
                         onChange={handleChange}
                         placeholder="Masukkan harga"
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

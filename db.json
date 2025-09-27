@@ -1,5 +1,11 @@
 {
-    "users": [
-    
-    ]
-}
+  "users": [],
+  "menu": [
+    {
+      "id": "0def",
+      "makanan": "mie ayam",
+      "Paket": "paket 2",
+      "Harga": "15000"
+    }
+  ]
+ }
