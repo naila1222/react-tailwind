@@ -2,10 +2,16 @@
   "users": [],
   "menu": [
     {
-      "id": "0def",
-      "makanan": "mie ayam",
-      "Paket": "paket 2",
-      "Harga": "15000"
+      "id": "aad9",
+      "makanan": "lele bakar",
+      "paket": "paket 1",
+      "harga": "20.000"
+    },
+    {
+      "id": "9a96",
+      "makanan": "ayam crispy",
+      "paket": "paket 5",
+      "harga": "25.000"
     }
   ]
- }
+}

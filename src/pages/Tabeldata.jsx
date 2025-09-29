@@ -5,7 +5,7 @@ import axios from "axios";
 function Tabeldata() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +27,7 @@ function Tabeldata() {
     if (!konfirmasi) return;
 
     try {
-      await axios.delete(`http://localhost:5000/menu/${id}`)
+      await axios.delete(` `)
       alert("Data berhasil dihapus");
       setData((prev) => prev.filter((item) => item.id !== id));
     } catch (err) {
@@ -44,6 +44,7 @@ function Tabeldata() {
       <div className="flex justify-end p-8 mr-14">
 
         <button
+          onClick={() => navigate ("/")}
           type="submit" className=" px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
 
           tambah

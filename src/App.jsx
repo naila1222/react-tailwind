@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import TambahData from './pages/Tambahdata'
+import TambahData from './pages/TambahData'
 import TabelData from './pages/Tabeldata'
 import Sidnav from './compenen/Sidnav'
 import EditData from './pages/Editdata'
