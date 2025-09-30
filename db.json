@@ -13,5 +13,39 @@
       "paket": "paket 5",
       "harga": "25.000"
     }
+  ],
+  "siswa": [
+    {
+      "id": "4ae1",
+      "nama": "lili",
+      "email": "nylasa@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2023",
+      "status": "Diterima"
+    },
+    {
+      "id": "5ddd",
+      "nama": "lili",
+      "email": "nylasa@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2023",
+      "status": "Diterima"
+    },
+    {
+      "id": "fc13",
+      "nama": "lili",
+      "email": "nylasa@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2023",
+      "status": "Diterima"
+    },
+    {
+      "id": "ea84",
+      "nama": "lili",
+      "email": "nylasa@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2023",
+      "status": "Diterima"
+    }
   ]
 }
